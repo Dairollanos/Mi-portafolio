@@ -1,38 +1,231 @@
-.App {
+@import "~antd/dist/antd.css";
+
+/* Navigation bar */
+
+header {
+  /* text-align: center; */
+  padding: 0.3em 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #03182d;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.nav-title {
+  font-family: Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+  margin: 0 1em;
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+  }
+  .nav-title {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list-item {
+  margin-left: 1.5em;
+  margin-right: 2em;
+  margin-top: 0.8em;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #30e3ca;
+  border-bottom: 1px solid #30e3ca;
+}
+
+@media (max-width: 500px) {
+  .nav-list {
+    flex-direction: column;
+  }
+  .nav-list-item {
+    margin: 0;
+    margin-top: 0.5em;
+  }
+}
+
+/* Content Home */
+
+.home-presentacion {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 98%;
+  color: #f5f5f5;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='350' preserveAspectRatio='none' viewBox='0 0 1440 350'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1066%26quot%3b)' fill='none'%3e%3crect width='1440' height='350' x='0' y='0' fill='rgba(1%2c 13%2c 25%2c 1)'%3e%3c/rect%3e%3cpath d='M3 350L353 0L510.5 0L160.5 350z' fill='url(%23SvgjsLinearGradient1067)'%3e%3c/path%3e%3cpath d='M246.60000000000002 350L596.6 0L662.6 0L312.6 350z' fill='url(%23SvgjsLinearGradient1067)'%3e%3c/path%3e%3cpath d='M506.20000000000005 350L856.2 0L913.2 0L563.2 350z' fill='url(%23SvgjsLinearGradient1067)'%3e%3c/path%3e%3cpath d='M747.8000000000001 350L1097.8000000000002 0L1210.3000000000002 0L860.3000000000001 350z' fill='url(%23SvgjsLinearGradient1067)'%3e%3c/path%3e%3cpath d='M1427 350L1077 0L832.5 0L1182.5 350z' fill='url(%23SvgjsLinearGradient1068)'%3e%3c/path%3e%3cpath d='M1188.4 350L838.4000000000001 0L725.9000000000001 0L1075.9 350z' fill='url(%23SvgjsLinearGradient1068)'%3e%3c/path%3e%3cpath d='M922.8 350L572.8 0L494.79999999999995 0L844.8 350z' fill='url(%23SvgjsLinearGradient1068)'%3e%3c/path%3e%3cpath d='M685.1999999999999 350L335.19999999999993 0L224.19999999999993 0L574.1999999999999 350z' fill='url(%23SvgjsLinearGradient1068)'%3e%3c/path%3e%3cpath d='M1205.3050903046208 350L1440 115.30509030462082L1440 350z' fill='url(%23SvgjsLinearGradient1067)'%3e%3c/path%3e%3cpath d='M0 350L234.69490969537918 350L 0 115.30509030462082z' fill='url(%23SvgjsLinearGradient1068)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1066'%3e%3crect width='1440' height='350' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1067'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1068'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  height: fit-content;
+}
+
+.home-title {
+  color: #34ffe4;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5em 1em 0;
+}
+
+.home-description {
+  color: #17a08e;
+  font-size: 1.3rem;
+  padding: 1em 1.3em 2em;
+  margin-bottom: 0.3em;
+}
+
+.section {
+  width: 98%;
+  margin: 0 auto;
+  background-color: #03182d;
+  font-size: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section h2 {
+  color: white;
+  padding: 0.3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content-style {
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+  border: 1px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-style ul {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0.2em 1em;
+}
+
+.home-perfil-laboral-tecnologias {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home-perfil-laboral-tecnologias img {
+  height: 180px;
+  width: 180px;
+  margin-bottom: 5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home-perfil-laboral-tecnologias img:hover {
+  padding: 0.3em;
+}
+
+.backend-tec {
+  display: flex;
+  justify-content: space-around;
+}
+
+.frontend-tec {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 750px) {
+  .backend-tec {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .frontend-tec {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .home-perfil-laboral-tecnologias img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5em;
+  }
+}
+
+/* Contactar */
+
+.contactar-content ul {
+  font-size: 1.5rem;
+}
+
+.contactar {
+  padding-bottom: 5px;
+}
+
+/* Carrusel */
+
+.carousel-style {
+  margin: 1.5em auto;
+  width: 80%;
+}
+.carousel-style h2 {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.codigo-proyecto {
+  text-align: center;
+}
+
+.carousel-style p {
+  font-size: 1.2rem;
+}
+
+.carousel-style h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.carousel-style li {
+  list-style: disc;
+}
+
+.carrusel img {
+  margin: 0 auto;
+  width: 700px;
+}
+
+@media (max-width: 925px) {
+  .carrusel img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 575px) {
+  .carrusel img {
+    width: 250px;
+  }
+}
+
+.project-one,
+.project-two,
+.project-three {
+  border-bottom: 3px solid black;
+  margin-bottom: 1em;
 }
